@@ -1,0 +1,82 @@
+columns:
+  - AGE: float64
+  - APOE4: float64
+  - CDRSB_bl: float64
+  - ADAS11_bl: float64
+  - ADAS13_bl: float64
+  - MMSE_bl: float64
+  - RAVLT_immediate_bl: float64
+  - RAVLT_learning_bl: float64
+  - RAVLT_forgetting_bl: float64
+  - RAVLT_perc_forgetting_bl: float64
+  - FAQ_bl: float64
+  - Ventricles_bl: float64
+  - Hippocampus_bl: float64
+  - WholeBrain_bl: float64
+  - Entorhinal_bl: float64
+  - Fusiform_bl: float64
+  - MidTemp_bl: float64
+
+numerical_columns:
+  - AGE
+  - APOE4
+  - CDRSB_bl
+  - ADAS11_bl
+  - ADAS13_bl
+  - MMSE_bl
+  - RAVLT_immediate_bl
+  - RAVLT_learning_bl
+  - RAVLT_forgetting_bl
+  - RAVLT_perc_forgetting_bl
+  - FAQ_bl
+  - Ventricles_bl
+  - Hippocampus_bl
+  - WholeBrain_bl
+  - Entorhinal_bl
+  - Fusiform_bl
+  - MidTemp_bl
+
+drop_columns:
+  - file
+  - matcher
+  - PTID
+  - LONIUID_UCSFFSL_02_01_16_UCSFFSL51ALL_08_01_16
+  - LONIUID_UCSFFSX_11_02_15_UCSFFSX51_08_01_16
+  - EXAMDATE
+  - EXAMDATE_bl
+  - EXAMDATE_UCSFFSL_02_01_16_UCSFFSL51ALL_08_01_16
+  - EXAMDATE_UCSFFSX_11_02_15_UCSFFSX51_08_01_16
+  - CDRSB
+  - ADAS11
+  - ADAS13
+  - MMSE
+  - RAVLT_immediate
+  - RAVLT_learning
+  - RAVLT_forgetting
+  - RAVLT_perc_forgetting
+  - FAQ
+  - Ventricles
+  - Hippocampus
+  - WholeBrain
+  - Entorhinal
+  - Fusiform
+  - MidTemp
+  - MOCA
+  - DX
+  - DX_bl
+  - DXCHANGE
+  - CURRENT_DIAGNOSE
+  - PTGENDER
+  - PTEDUCAT
+  - PTETHCAT
+  - PTRACCAT
+  - PTMARRY
+
+row_filter_condition: "VISCODE == 'bl'"
+drop_duplicates:
+  subset: "RID"
+  keep: "first"
+
+drop_columns_2:
+  - RID
+  - VISCODE
