@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MMSE Score Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>MMSE (Mini-Mental State Examination) Score Prediction</h2>
+
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+
+        <form action="/predict" method="post">
+            <label for="AGE">AGE:</label>
+            <input type="text" step="any" name="AGE" required>
+            
+            <label for="APOE4">APOE4:</label>
+            <input type="text" step="any" name="APOE4" required>
+            
+            <label for="CDRSB_bl">CDRSB:</label>
+            <input type="text" step="any" name="CDRSB_bl" required>
+            
+            <label for="ADAS11_bl">ADAS11:</label>
+            <input type="text" step="any" name="ADAS11_bl" required>
+            
+            <label for="ADAS13_bl">ADAS13:</label>
+            <input type="text" step="any" name="ADAS13_bl" required>
+
+            <label for="RAVLT_immediate_bl">RAVLT_immediate:</label>
+            <input type="text" step="any" name="RAVLT_immediate_bl" required>
+            
+            <label for="RAVLT_learning_bl">RAVLT_learning:</label>
+            <input type="text" step="any" name="RAVLT_learning_bl" required>
+
+            <label for="RAVLT_forgetting_bl">RAVLT_forgetting:</label>
+            <input type="text" step="any" name="RAVLT_forgetting_bl" required>
+
+            <label for="RAVLT_perc_forgetting_bl">RAVLT_perc_forgetting:</label>
+            <input type="text" step="any" name="RAVLT_perc_forgetting_bl" required>
+
+            <label for="FAQ_bl">FAQ:</label>
+            <input type="text" step="any" name="FAQ_bl" required>
+
+            <label for="Ventricles_bl">Ventricles:</label>
+            <input type="text" step="any" name="Ventricles_bl" required>
+
+            <label for="Hippocampus_bl">Hippocampus:</label>
+            <input type="text" step="any" name="Hippocampus_bl" required>
+
+            <label for="WholeBrain_bl">WholeBrain:</label>
+            <input type="text" step="any" name="WholeBrain_bl" required>
+
+            <label for="Entorhinal_bl">Entorhinal:</label>
+            <input type="text" step="any" name="Entorhinal_bl" required>
+
+            <label for="Fusiform_bl">Fusiform:</label>
+            <input type="text" step="any" name="Fusiform_bl" required>
+
+            <label for="MidTemp_bl">MidTemp:</label>
+            <input type="text" step="any" name="MidTemp_bl" required>
+            
+            <input type="submit" value="Predict">
+        </form>
+
+    </div>
+</body>
+</html>

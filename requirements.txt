@@ -8,4 +8,12 @@ PyYAML
 dill
 scipy
 imblearn==0.0
+blinker
+click
+colorama
+Flask
+gunicorn
+itsdangerous
+Jinja2
+Werkzeug
 -e . #editable mode
