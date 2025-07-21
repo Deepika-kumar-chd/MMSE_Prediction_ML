@@ -78,15 +78,15 @@ GridSearchCV was applied to all models to find the best parameters. Performance 
   </tr>
   <tr>
     <td>Random Forest</td>
-    <td>0.660</td>
-    <td>1.589</td>
-    <td>1.253</td>
+    <td>0.659</td>
+    <td>1.590</td>
+    <td>1.252</td>
   </tr>
   <tr>
     <td>Gradient Boosting</td>
-    <td>0.656</td>
-    <td>1.598</td>
-    <td>1.256</td>
+    <td>0.655</td>
+    <td>1.599</td>
+    <td>1.262</td>
   </tr>
   <tr>
     <td>XGBoost</td>
